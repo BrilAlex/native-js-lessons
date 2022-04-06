@@ -1,3 +1,3 @@
 import {IGlobalState} from "./state";
 
-export const selectAllState = (state: IGlobalState) => state.currency;
+export const selectCurrencyState = (state: IGlobalState) => state.currency;
