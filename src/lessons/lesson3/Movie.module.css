@@ -1,0 +1,32 @@
+.movie {
+    padding: 15px 0;
+}
+
+.movie:after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.moviePoster {
+    float: left;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.moviePoster img {
+    width: 100%;
+}
+
+.movieDescription {
+    float: left;
+    width: 320px;
+}
+
+.movieDescription h2 {
+    margin: 0 0 15px 0;
+}
+
+.movieDescription p {
+    margin: 0 0 5px 0;
+}
