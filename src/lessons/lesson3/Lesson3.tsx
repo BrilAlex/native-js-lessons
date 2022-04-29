@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import API, {APIResponseType, MovieSearchResultType} from './API';
+import API, {MovieSearchResultType} from './API';
 import './lesson_3';
+import s from "./Lesson3.module.css";
 import {Movie} from "./Movie";
 
 type SearchResultType = {
@@ -52,7 +53,7 @@ const Lesson3 = () => {
         <h3><p>Search by name:</p></h3>
         <input type="text" value={searchName} onChange={(e) => setSearchName(e.currentTarget.value)}/>
         <button onClick={searchFilm}>Search</button>
-        <div>
+        <div className={s.results}>
           {typeof searchResult === "string" ?
             searchResult
             :
@@ -69,7 +70,7 @@ const Lesson3 = () => {
         <input type="text" value={searchNameByType} onChange={(e) => setSearchNameByType(e.currentTarget.value)}/>
         <button onClick={searchByType} data-t='movie'>Movie</button>
         <button onClick={searchByType} data-t='series'>Series</button>
-        <div>
+        <div className={s.results}>
           {typeof searchResultByType === "string" ?
             searchResultByType
             :
